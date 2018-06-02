@@ -1,10 +1,24 @@
 # File name: main.py
 
-<Widgets>
-	Button:
-		size: 150,75
-		pos: 150,0
-		text: 'NEXT'
-		color: 0,1,0,1
-		font_size: 40
-	
+<TriviaAppBoxLayout>
+	orientation: 'vertical'
+	Label:
+		text: '[b]''Trivia App''[/b]'
+		font_size: 50
+	Label:
+		id: result
+		font_size: 10
+		size: 50,25
+		text_size: self.width, None
+		color: 1,1,0,1
+		text: ''
+	BoxLayout:
+		orientation: 'horizontal'
+		Button:
+			size: 150,75
+			pos: 150,0
+			text: 'NEXT'
+			color: 0,1,0,1
+			font_size: 40
+			on_release: root.showTrivia()
+		
